@@ -1,0 +1,195 @@
+::root {
+	--grass-img: url(img/grass_block_side.png);
+}
+
+@font-face {
+	font-family: "Monocraft";
+	src: url(fonts/Monocraft-nerd-fonts-patched.ttc);
+	font-weight: normal;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Monocraft", monospace;
+	image-rendering: pixelated;
+	max-width: 100%;
+}
+
+html{
+	width: device-width;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+body {
+	height: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+header {
+	background-image: url(img/grass_block_side.png), url(img/dirt.png);
+	background-repeat: repeat-x, repeat;
+	background-position-y: top, 8rem;
+	background-size: 8rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	>h1 {
+		padding: 1rem;
+		font-size: 2.5rem;
+	}
+
+	>nav>#nav-links {
+		display: flex;
+		gap: 2rem;
+
+		:hover {
+			border-color: white;
+			background-color: #3b8526;
+		}
+
+		>button {
+			cursor: pointer;
+			background-color: #7f7f7f;
+			border: black solid .2rem;
+			color: white;
+			box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.3) inset;
+			width: 10rem;
+			padding: 1rem;
+			display: flex;
+			text-align: center;
+			font-size: 1.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+main {
+	background-image: url(/img/stone.png);
+	margin-top: 0rem;
+	padding: 2rem 2rem 2rem 2rem;
+	background-size: 8rem;
+}
+
+.gallery .image-grid {
+	display: flex;
+	overflow: hidden;
+
+	#placeholderImg {
+		height: 20rem;
+		padding: 1rem 0 0 0;
+	}
+}
+#upBtnArea{
+	position: fixed;
+	top: 90%;
+	left: 95%;
+}
+#upBtn {
+	cursor: pointer;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	background-color: #7f7f7f;
+	border: black solid .2rem;
+	color: white;
+	box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.3) inset;
+	align-content: center;
+	justify-content: center;
+	font-size: 2rem;
+	text-align: center;
+	span{
+		height: 100%;
+		width: 100%;
+	}
+}
+
+#upBtn:hover {
+	border-color: white;
+	background-color: #3b8526;
+}
+
+footer {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url(img/deepslate.png);
+	background-size: 8rem;
+	background-repeat: repeat;
+}
+
+@media screen and (max-width: 48rem) {
+	header > h1{
+		font-size: 2rem;
+	}
+	header>nav #nav-links{
+		flex-direction: column;
+	}
+	main{
+		font-size: 1rem;
+	}
+	#upBtnArea{
+		position: fixed;
+		height: 2rem;
+		width: 2rem;
+		top: 39rem;
+		left: 21rem;
+	}
+	#upBtn{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 48rem) {
+	header > h1{
+		font-size: 3rem;
+	}
+	header>nav #nav-links{
+		flex-direction: row;
+	}
+	main{
+		font-size: 1.5rem;
+	}
+	#upBtnArea{
+		position: fixed;
+		height: 4rem;
+		width: 4rem;
+		top: 71rem;
+		left: 48rem;
+	}
+	#upBtn{
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 85.375rem) {
+	header > h1{
+		font-size: 3rem;
+	}
+	header>nav #nav-links{
+		flex-direction: row;
+	}
+	main{
+		font-size: 1.5rem;
+	}
+	#upBtnArea{
+		position: fixed;
+		height: 2rem;
+		width: 2rem;
+		top: 90%;
+		left: 95%;
+	}
+	#upBtn{
+		font-size: 1.5rem;
+	}
+}
